@@ -1,0 +1,21 @@
+{
+    "activeProjectIndex": 1,
+    "projects": [
+        {
+            "projectName": "Default Project",
+            "plugins": []
+        },
+        {
+            "projectName": "debugger",
+            "plugins": [
+                {
+                    "pluginName": "Debugger",
+                    "className": "Debugger",
+                    "uploader": "Debugger",
+                    "description": "Dont cleae",
+                    "sourceCode": "using UnityEngine; public class Debuger : MonoBehaviour, IValvyPlugin { public string PluginName => \"Debuger\"; public string Desc => \"it prints to the console when somone join or left ect...\"; public void OnPluginInitialize() { Debug.Log($\"{PluginName} initialized!\"); Debug.Log($\"{Desc} initialized!\"); } public void OnPlayerJoined(int clientId) { Debug.Log($\"Player #{clientId} joined.\"); } public void OnPlayerLeft(int clientId) { Debug.Log($\"Player #{clientId} left.\"); } public void OnRoomCreated(string roomId) { Debug.Log($\"Room {roomId} created!\"); } public void OnNetworkUpdate() { } public void OnCustomPacketReceived(string packetType, string data, int senderId) { Debug.Log($\"Packet [{packetType}] received from {senderId}: {data}\"); } }"
+                }
+            ]
+        }
+    ]
+}
